@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 		@article.save
 
-		flash.notice = "Article '#{article_title} Created!"
+		flash.notice = "Article '#{article_title}' Created!"
 
 		redirect_to article_path(@article)
 	end
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
 
 	def update
 		@article = Article.find(params[:id])
-		@article.update(articles_params)
+		@article.update(article_params)
 
 		flash.notice = "Article '#{@article_title}' Updated!"
 
